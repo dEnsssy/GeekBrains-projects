@@ -7,12 +7,24 @@
 
 int number = new Random().Next(10, 100);
 Console.WriteLine($"Случайное число из отрезка 10 - 99 -> {number}");
-int firstDigit = number / 10;
-int secondDigit = number % 10;
+// int firstDigit = number / 10;
+// int secondDigit = number % 10;
 // if (firstDigit>secondDigit)
 //    Console.WriteLine(firstDigit);
 // else 
 //    Console.WriteLine(secondDigit);
 
-int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
+// int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
+// Console.WriteLine(maxDigit);
+
+int maxDigit = MaxDigit(number);
 Console.WriteLine(maxDigit);
+
+int MaxDigit (int num)
+{
+   int firstDigit = num / 10;
+   int secondDigit = num % 10;
+   int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
+   return maxDigit;
+}
+
